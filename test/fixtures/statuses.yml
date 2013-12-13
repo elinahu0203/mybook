@@ -2,10 +2,10 @@
 
 one:
   content: MyText
-  user: Bob
+  user: eric
 two:
   content: MyText
-  user: Bob
+  user: eric
 three:
   content: "Hi I'm eric"
-  user: eric
+  user: jiahao

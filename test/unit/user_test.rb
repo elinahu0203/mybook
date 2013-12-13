@@ -21,15 +21,15 @@ class UserTest < ActiveSupport::TestCase
 
 	test "a user should have a unique profile name" do
 	user = User.new
-	user.profile_name = users(:Bob).profile_name
+	user.profile_name = users(:eric).profile_name
 
 	assert !user.save
 	assert !user.errors[:profile_name].empty?
 	end
 
 	test "a user should have a profile name without spaces" do
-    user = User.new(first_name: 'Bob', last_name: 'Hu', email: 'bob@gmail.com')
-    user.profile_name = 'bobhu'
+    user = User.new(first_name: 'eric', last_name: 'lee', email: 'yiqibiancheng@gmail.com')
+    user.profile_name = 'ericlee'
 
     assert !user.save
     assert !user.errors[:profile_name].empty?
@@ -37,9 +37,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "a user can have a correctly formatted profile name" do
-    user = User.new(first_name: 'Bob', last_name: 'Hu', email: 'bob@gmail.com')
+    user = User.new(first_name: 'eric', last_name: 'lee', email: 'yiqibiancheng@gmail.com')
 
-    user.profile_name = 'bobhu'
+    user.profile_name = 'ericlee'
     assert user.valid?
   end
 end
